@@ -1,46 +1,46 @@
 package in_out;
 import java.util.Scanner;
 import java.io.File;
+import java.io.PrintStream;
 //import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
 
 
-public class Loader {
+public class Loader{
 	
 	Scanner sc;
 	File fileImpl;
 	
-	List<Mobile> new_mobile= new ArrayList<>();
 	
-	public List<Mobile> getNew_mobile() {
-		return new_mobile;
-	}
+	
+	Boolean t=false;
 
-	public void setNew_mobile(List<Mobile> new_mobile) {
-		this.new_mobile = new_mobile;
-	}
-
-	public List<String> exep_handle() {
+	public List<Mobile> loadMobile(String file) {
+	List<Mobile> data= new ArrayList<>();
 	try{
-		fileImpl = new File("Inputimp");
+		
+		fileImpl = new File("Inputimp.txt");
 		sc=new Scanner(fileImpl);
 		while(sc.hasNextLine()) {
 			String records = sc.nextLine();
 			//System.out.println(records);
-			String recordfields[] = records.split(",");
-			return new_mobile.add(new Mobile(recordfields[0],recordfields[1]));
+			String recordfields[];
+			recordfields=records.split(",");
+			Mobile m= new Mobile(recordfields[0],recordfields[1]);
+			data.add(m);
 		}
+		t=true;
 	}catch(Exception e) {
 	e.printStackTrace();
 	}finally {
-		
+		if(t==true) {
 		System.out.println("Input successfully written in file");
 		System.out.println();
-	
+		}
 	}
-
+	return data;
 	}
 	
-
+	
 }
