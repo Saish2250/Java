@@ -23,6 +23,8 @@ public class ClientApp {
 		Mystack.pop();
 		Mystack.pop();
 		
+		System.out.println("Peek");
+		Mystack.peek();
 		
 		Mystack.printStack();
 	}

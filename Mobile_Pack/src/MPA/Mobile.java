@@ -3,43 +3,76 @@ package MPA;
 //import java.util.Map;
 
 public class Mobile {
-	private String brandname;
-	private Integer price;
-	private String modelname;
+	private String brandName,modelName,OS;
+	private Integer sellingPrice,storageCapacity;
+	private Boolean isStorageSSD;
+	private Double screenSize;
 	
-	//quantative attributes
-	Integer camera;
-	Integer ram;
-	Integer size;
-	String resolution;
-	
-	//qualitative attributes
-	String version;
-	Boolean android;
-	String processor;
-	
-	
-	public String getBrandname() {
-		return brandname;
+	public Mobile(String brandName,String modelName,Integer sellingPrice,Double screenSize,Integer storageCapacity,Boolean isStorageSSD,String OS) {
+		this.brandName=brandName;
+		this.modelName=modelName;
+		this.screenSize=screenSize;
+		this.storageCapacity=storageCapacity;
+		this.OS=OS;
+		this.sellingPrice=sellingPrice;
+		this.isStorageSSD=isStorageSSD;
 	}
-	public void setBrandname(String brandname) {
-		this.brandname = brandname;
+
+	public String getBrandName() {
+		return brandName;
 	}
-	public Integer getPrice() {
-		return price;
+
+	public void setBrandName(String brandName) {
+		this.brandName = brandName;
 	}
-	public void setPrice(Integer price) {
-		this.price = price;
+
+	public String getModelName() {
+		return modelName;
 	}
-	public String getModelname() {
-		return modelname;
+
+	public void setModelName(String modelName) {
+		this.modelName = modelName;
 	}
-	public void setModelname(String modelname) {
-		this.modelname = modelname;
+
+	public String getOS() {
+		return OS;
+	}
+
+	public void setOS(String oS) {
+		OS = oS;
+	}
+
+	public Integer getSellingPrice() {
+		return sellingPrice;
+	}
+
+	public void setSellingPrice(Integer sellingPrice) {
+		this.sellingPrice = sellingPrice;
+	}
+
+	public Integer getStorageCapacity() {
+		return storageCapacity;
+	}
+
+	public void setStorageCapacity(Integer storageCapacity) {
+		this.storageCapacity = storageCapacity;
+	}
+
+	public Boolean getIsStorageSSD() {
+		return isStorageSSD;
+	}
+
+	public void setIsStorageSSD(Boolean isStorageSSD) {
+		this.isStorageSSD = isStorageSSD;
+	}
+
+	public Double getScreenSize() {
+		return screenSize;
+	}
+
+	public void setScreenSize(Double screenSize) {
+		this.screenSize = screenSize;
 	}
 
 	
-	
-	
-	//p<String,String> ma = new Map<String,String>();
 }

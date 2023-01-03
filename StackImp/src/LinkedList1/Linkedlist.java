@@ -71,7 +71,7 @@ public class Linkedlist {
 		}
 	}
 	
-	public Integer top() {
+	public Integer last() {
 		if(head==null) {
 			System.out.println("List is empty");
 			return null;
@@ -80,6 +80,16 @@ public class Linkedlist {
 			while(temp4.getNext()!=null) {
 				return temp4.getValue();
 			}
+		}
+		return null;
+	}
+	
+	public Integer getTop() {
+		if(head == null) {
+			System.out.println("Empty");
+			return null;
+		} else {
+			return head.getValue();
 		}
 	}
 	

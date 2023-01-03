@@ -27,7 +27,11 @@ public class Stackimp {
 		linkedlist.printList();
 	}
 	
-	public void peek() {
-		
+	public Integer peek() {
+		if(insertatbeg) {
+			return linkedlist.getTop();
+		}else {
+			return linkedlist.last();
+		}
 	}
 }
