@@ -21,6 +21,33 @@ public class ClientApp {
 		
 		allLaptops=laptopDB.filterByBrand("Apple");
 		printLaptops("Brand Name = Apple",allLaptops);
+		
+		allLaptops=laptopDB.filterBySellingPrice(true, 60000);
+	    printLaptops("Selling Price <= 60000",allLaptops);
+	    
+	    allLaptops=laptopDB.filterBySellingPrice(false, 60000);
+	    printLaptops("Selling Price >= 60000",allLaptops);
+	    
+	    allLaptops=laptopDB.filterByScreenSize(true, 15.4);
+	    printLaptops("Screen Size <= 15.4''",allLaptops);
+	    
+	    allLaptops=laptopDB.filterByScreenSize(false, 15.4);
+	    printLaptops("Screen Size >= 15.4''",allLaptops);
+	    
+	    allLaptops=laptopDB.filterByStorageCapacity(500);
+	    printLaptops("Minimun Storage Capacity of 500 GB",allLaptops);
+	    
+	    allLaptops=laptopDB.filterBySSD(true);
+	    printLaptops("Laptops with SSD",allLaptops);
+	    
+	    allLaptops=laptopDB.filterBySSD(false);
+	    printLaptops("Laptops without SSD",allLaptops);
+	    
+	    allLaptops=laptopDB.filterByOS("iOS Sierra");
+	    printLaptops("Laptops with 'iOS Sierra' OS",allLaptops);
+	    
+	    allLaptops=laptopDB.searchModel("Macbook");
+	    printLaptops("Laptops searched by 'Macbook' keyword",allLaptops);
 	}
 	
 	public static void printLaptops(String message,ArrayList<Laptop> laptops) {

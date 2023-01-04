@@ -51,7 +51,7 @@ public class LaptopDB {
 		return allLaptops;
 	}
 	
-	public ArrayList<Laptop> filterByScreenSize(Boolean less,Integer size){
+	public ArrayList<Laptop> filterByScreenSize(Boolean less,Double size){
 		ArrayList<Laptop> allLaptops = new ArrayList<>();
 		laptops.forEach((key,value) -> {
 			if(less) {
