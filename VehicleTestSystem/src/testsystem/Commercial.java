@@ -1,0 +1,5 @@
+package testsystem;
+
+interface Commercial {
+	
+}
